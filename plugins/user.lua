@@ -9,4 +9,11 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("user.plugins.treesitter")
+    end,
+  },
+  "windwp/nvim-autopairs",
 }
