@@ -26,5 +26,5 @@ return {
     name = "vim-jsx-pretty",
     dependencies = { "HerringtonDarkholme/yats.vim", "yuezk/vim-js" },
     event = { "BufEnter *.tsx", "BufEnter *.ts" },
-  }
+  },
 }
