@@ -80,7 +80,7 @@ return {
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
-        -- "sumneko_lua",
+        "tsserver",
       },
       timeout_ms = 1000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function

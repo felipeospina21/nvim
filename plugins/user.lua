@@ -16,9 +16,7 @@ return {
     event = { "BufEnter *.tsx", "BufEnter *.ts" },
   },
   {
-    "windwp/nvim-ts-autotag",
-    event = "VeryLazy",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-    opts = { filetypes = { "tsx", "typescriptreact" } }
-  },
+    "EtiamNullam/deferred-clipboard.nvim",
+    opts = { fallback = "unnamedplus" }
+  }
 }
