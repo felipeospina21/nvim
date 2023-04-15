@@ -11,15 +11,27 @@ return {
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
+        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr)
+          require("astronvim.utils.buffer").close(
+            bufnr)
+        end)
       end,
       desc = "Pick to close",
     },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
-    -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
+    -- jester plugin
+    ["<leader>r"] = { name = "Jester" },
+    ["<leader>rt"] = { "<cmd>lua require'jester'.run()<cr>", desc = "Run test under cursor" },
+    ["<leader>rf"] = { "<cmd>lua require'jester'.run_file()<cr>", desc = "Run test file" },
+    -- harpoon plugin
+    ["<leader>H"] = { name = "Harpoon" },
+    ["<leader>Hm"] = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", desc = "Toggle menu" },
+    ["<leader>Ha"] = { "<cmd>lua require('harpoon.mark').add_file()<cr>", desc = "Add file" },
+    ["<C-.>"] = { "<cmd>lua require('harpoon.ui').nav_next()<cr>", desc = "Nav next file" },
+    ["<C-,>"] = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", desc = "Nav prev file" },
   },
   t = {
     -- setting a mapping to false will disable it

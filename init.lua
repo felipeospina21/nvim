@@ -61,6 +61,7 @@ return {
   },
   -- Set colorscheme to use
   colorscheme = "tokyonight",
+  -- colorscheme = "onedark",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
