@@ -30,8 +30,6 @@ return {
     ["<leader>H"] = { name = "Harpoon" },
     ["<leader>Hm"] = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", desc = "Toggle menu" },
     ["<leader>Ha"] = { "<cmd>lua require('harpoon.mark').add_file()<cr>", desc = "Add file" },
-    ["<C-.>"] = { "<cmd>lua require('harpoon.ui').nav_next()<cr>", desc = "Nav next file" },
-    ["<C-,>"] = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", desc = "Nav prev file" },
   },
   t = {
     -- setting a mapping to false will disable it
