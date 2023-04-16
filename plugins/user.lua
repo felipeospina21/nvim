@@ -1,5 +1,5 @@
 return {
-  { "navarasu/onedark.nvim", enabled = false },
+  { "navarasu/onedark.nvim",    enabled = false },
   {
     "folke/tokyonight.nvim",
     name = "tokyonight",
@@ -37,5 +37,8 @@ return {
       { "<A-n>", "<cmd>lua require('harpoon.ui').nav_next()<cr>", desc = "nav next harpoon file" },
       { "<A-e>", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", desc = "nav prev harpoon file" },
     }
-  }
+  },
+  { "ThePrimeagen/vim-be-good", event = { "VeryLazy" } },
+
+
 }
