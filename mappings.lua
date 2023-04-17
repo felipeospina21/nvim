@@ -19,9 +19,12 @@ return {
       desc = "Pick to close",
     },
     -- tables with the `name` key will be registered with which-key if it's installed
-    -- this is useful for naming menus
+
+    -- custom
     ["<leader>b"] = { name = "Buffers" },
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
+    ["<leader><Tab>"] = { "<cmd>bnext<cr>", desc = "Next Buffer" },
+    ["<leader><S-Tab>"] = { "<cmd>bprevious<cr>", desc = "Prev Buffer" },
     -- jester plugin
     ["<leader>r"] = { name = "Jester" },
     ["<leader>rt"] = { "<cmd>lua require'jester'.run()<cr>", desc = "Run test under cursor" },

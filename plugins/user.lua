@@ -1,19 +1,15 @@
 return {
-  { "navarasu/onedark.nvim",    enabled = false },
+  { "navarasu/onedark.nvim",    enabled = true },
   {
     "folke/tokyonight.nvim",
-    name = "tokyonight",
     opts = {
       style = "moon",
       on_highlights = function(hl, c)
-        -- hl.Function = { fg = "#c53b53", style = { italic = true } }
-        -- hl["@keyword.function"] = { fg = "#b3ff99" }
-        hl.Type = { fg = c.red, style = { italic = true } }
-        hl.StorageClass = { fg = c.teal }
-        hl["@type.builtin"] = { fg = c.yellow }
-        -- hl["@type.parameter"] = { fg = "#b30f99" }
+        hl.Type = { fg = c.yellow, style = { italic = true } }
+        hl["@type.builtin"] = { fg = c.yellow, style = { italic = false } }
       end
     },
+    enabled = true
   },
   {
     "maxmellon/vim-jsx-pretty",
