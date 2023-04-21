@@ -25,10 +25,12 @@ return {
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
     ["<leader><Tab>"] = { "<cmd>bnext<cr>", desc = "Next Buffer" },
     ["<leader><S-Tab>"] = { "<cmd>bprevious<cr>", desc = "Prev Buffer" },
+    -- ["<leader>r"] = { "<cmd>e<cr>", desc = "" },
+
     -- jester plugin
-    ["<leader>r"] = { name = "Jester" },
-    ["<leader>rt"] = { "<cmd>lua require'jester'.run()<cr>", desc = "Run test under cursor" },
-    ["<leader>rf"] = { "<cmd>lua require'jester'.run_file()<cr>", desc = "Run test file" },
+    ["<leader>j"] = { name = "Jester" },
+    ["<leader>jt"] = { "<cmd>lua require'jester'.run()<cr>", desc = "Run test under cursor" },
+    ["<leader>jf"] = { "<cmd>lua require'jester'.run_file()<cr>", desc = "Run test file" },
     -- harpoon plugin
     ["<leader>H"] = { name = "Harpoon" },
     ["<leader>Hm"] = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", desc = "Toggle menu" },

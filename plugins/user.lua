@@ -35,6 +35,13 @@ return {
     }
   },
   { "ThePrimeagen/vim-be-good", event = { "VeryLazy" } },
-
+  -- {
+  --   "https://git.sr.ht/~nedia/auto-save.nvim",
+  --   event = { "BufWinEnter" },
+  --   opts = {
+  --     events = { "BufLeave" },
+  --     exclude_ft = { "neo-tree" },
+  --   }
+  -- }
 
 }
