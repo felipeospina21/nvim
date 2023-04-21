@@ -25,8 +25,7 @@ return {
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
     ["<leader><Tab>"] = { "<cmd>bnext<cr>", desc = "Next Buffer" },
     ["<leader><S-Tab>"] = { "<cmd>bprevious<cr>", desc = "Prev Buffer" },
-    -- ["<leader>r"] = { "<cmd>e<cr>", desc = "" },
-
+    ["<leader>r"] = { "<cmd>e<cr>", desc = "Refresh file" },
     -- jester plugin
     ["<leader>j"] = { name = "Jester" },
     ["<leader>jt"] = { "<cmd>lua require'jester'.run()<cr>", desc = "Run test under cursor" },
