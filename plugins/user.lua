@@ -4,6 +4,9 @@ return {
     "folke/tokyonight.nvim",
     opts = {
       style = "moon",
+      on_colors = function(colors)
+        colors.comment = "#9095b0"
+      end,
       on_highlights = function(hl, c)
         hl.Type = { fg = c.yellow, style = { italic = true } }
         hl["@type.builtin"] = { fg = c.yellow, style = { italic = false } }
