@@ -5,7 +5,7 @@ return {
     opts = {
       style = "moon",
       on_colors = function(colors)
-        colors.comment = "#9095b0"
+        colors.comment = "#8294ba"
       end,
       on_highlights = function(hl, c)
         hl.Type = { fg = c.yellow, style = { italic = true } }
