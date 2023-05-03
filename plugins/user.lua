@@ -41,6 +41,14 @@ return {
       { "<A-,>", "<cmd>lua require('harpoon.mark').add_file()<cr>",        desc = "harpoon add file" },
     }
   },
+  {
+    "windwp/nvim-ts-autotag",
+    dependencies = { "nvim-treesitter" },
+    event = { "InsertEnter" },
+    config = function()
+      require("nvim-ts-autotag").setup { enable = true }
+    end
+  }
   -- {
   --   "https://git.sr.ht/~nedia/auto-save.nvim",
   --   event = { "BufWinEnter" },
