@@ -1,11 +1,13 @@
 return {
-  { "navarasu/onedark.nvim",    enabled = true },
+  { "navarasu/onedark.nvim", enabled = true },
   {
     "folke/tokyonight.nvim",
     opts = {
       style = "moon",
       on_colors = function(colors)
         colors.comment = "#8294ba"
+        colors.bg = "#212338"
+        -- colors.bg = "#272a42"
       end,
       on_highlights = function(hl, c)
         hl.Type = { fg = c.yellow, style = { italic = true } }
@@ -33,11 +35,12 @@ return {
     "ThePrimeagen/harpoon",
     dependencies = { "nvim-lua/plenary.nvim" },
     keys = {
-      { "<A-n>", "<cmd>lua require('harpoon.ui').nav_next()<cr>", desc = "nav next harpoon file" },
-      { "<A-e>", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", desc = "nav prev harpoon file" },
+      { "<A-n>", "<cmd>lua require('harpoon.ui').nav_next()<cr>",          desc = "nav next harpoon file" },
+      { "<A-e>", "<cmd>lua require('harpoon.ui').nav_prev()<cr>",          desc = "nav prev harpoon file" },
+      { "<A-m>", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", desc = "harpoon menu" },
+      { "<A-,>", "<cmd>lua require('harpoon.mark').add_file()<cr>",        desc = "harpoon add file" },
     }
   },
-  { "ThePrimeagen/vim-be-good", event = { "VeryLazy" } },
   -- {
   --   "https://git.sr.ht/~nedia/auto-save.nvim",
   --   event = { "BufWinEnter" },
