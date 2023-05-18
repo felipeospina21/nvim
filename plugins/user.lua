@@ -48,6 +48,15 @@ return {
     config = function()
       require("nvim-ts-autotag").setup { enable = true }
     end
+  },
+  {
+    "tpope/vim-surround",
+    dependencies = { "tpope/vim-repeat" },
+    event = { "BufEnter" }
+  },
+  {
+    "AndrewRadev/tagalong.vim",
+    event = { "BufEnter" }
   }
   -- {
   --   "https://git.sr.ht/~nedia/auto-save.nvim",

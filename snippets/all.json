@@ -1,0 +1,22 @@
+{
+  "describe": {
+    "prefix": "desc",
+    "description": "creates a describe block",
+    "body": "describe('${1:Name of the group}', () => {\n\t$0\n});"
+  },
+  "expect": {
+    "prefix": "exp",
+    "description": "expect actual value",
+    "body": "expect($0)"
+  },
+  "test": {
+    "prefix": "test",
+    "description": "creates a test block",
+    "body": "test('${1:should }', () => {\n\t$0\n});"
+  },
+  "it": {
+    "prefix": "it",
+    "description": "creates a test block",
+    "body": "it('${1:should }', () => {\n\t$0\n});"
+  }
+}

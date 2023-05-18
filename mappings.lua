@@ -8,6 +8,8 @@ return {
   n = {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
+    ["<leader>b"] = { name = "Buffers" },
+    ["<leader>bx"] = { "<cmd>bd<cr>", desc = "Close current buffer" },
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
@@ -21,7 +23,6 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
 
     -- custom
-    ["<leader>b"] = { name = "Buffers" },
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
     ["<A-t>"] = { "<cmd>bnext<cr>", desc = "Next Buffer" },
     ["<AS-t>"] = { "<cmd>bprevious<cr>", desc = "Prev Buffer" },

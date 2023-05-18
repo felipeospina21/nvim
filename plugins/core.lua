@@ -1,3 +1,4 @@
+local get_icon = require("astronvim.utils").get_icon
 return {
   -- customize alpha options
   {
@@ -20,25 +21,66 @@ return {
       return opts
     end,
   },
-  -- {
-  --   "nvim-neo-tree/neo-tree.nvim",
-  --   opts = {
-  --     filesystem = { filtered_items = { hide_dotfiles = false } }
-  --   }
-  -- },
+  {
+    "jay-babu/mason-nvim-dap.nvim",
+    opts = {
+      automatic_installation = true
+      -- handlers = {
+      --   firefox = function()
+      --     local dap = require "dap"
+      --     dap.adapters.firefox = {
+      --       type = "executable",
+      --       command = "node",
+      --       args = {
+      --         os.getenv('HOME') .. '/.local/share/nvim/mason/packages/firefox-debug-adapter/dist/adapter.bundle.js' }
+      --
+      --     }
+      --     dap.configurations.typescriptreact = {
+      --       {
+      --         name = 'Debug with Firefox',
+      --         type = 'firefox',
+      --         request = 'attach',
+      --         reAttach = true,
+      --         url = 'http://localhost:3000',
+      --         webRoot = '${workspaceFolder}',
+      --         firefoxExecutable = "/mnt/c/Program Files/Mozilla Firefox/firefox.exe"
+      --       }
+      --     }
+      --   end
+      --
+      -- },
+    },
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    config = function(_, opts)
+      opts.source_selector = {
+        winbar = true,
+        content_layout = "center",
+        sources = {
+          { source = "filesystem",  display_name = get_icon "FolderClosed" .. " File" },
+          { source = "buffers",     display_name = get_icon "DefaultFile" .. " Bufs" },
+          { source = "diagnostics", display_name = get_icon "Diagnostic" .. " Diagnostic" },
+        },
+      }
+      opts.filesystem = { filtered_items = { hide_dotfiles = false, hide_by_name = { ".git", ".github" } } }
+      require('neo-tree').setup(opts)
+    end
+  },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
-  -- {
-  --   "L3MON4D3/LuaSnip",
-  --   config = function(plugin, opts)
-  --     require "plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
-  --     -- add more custom luasnip configuration such as filetype extend or custom snippets
-  --     local luasnip = require "luasnip"
-  --     luasnip.filetype_extend("javascript", { "javascriptreact" })
-  --   end,
-  -- },
+  {
+    "L3MON4D3/LuaSnip",
+    config = function(plugin, opts)
+      require "plugins.configs.luasnip" (plugin, opts) -- include the default astronvim config that calls the setup call
+      require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } }
+      -- add more custom luasnip configuration such as filetype extend or custom snippets
+      -- local luasnip = require "luasnip"
+      -- luasnip.filetype_extend("javascript", { "javascriptreact" })
+    end,
+  },
   -- {
   --   "windwp/nvim-autopairs",
   --   config = function(plugin, opts)

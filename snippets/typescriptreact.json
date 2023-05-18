@@ -1,0 +1,42 @@
+{
+  "TSX Function": {
+    "prefix": "rfn",
+    "description": "Create a React Pure Function Component.",
+    "body": [
+      "import React from 'react';",
+      "",
+      "export interface ${1:${TM_FILENAME_BASE}}Props {",
+      "}",
+      "",
+      "export function ${1:${TM_FILENAME_BASE}} (props: ${1:${TM_FILENAME_BASE}}Props):JSX.Element  {",
+      "  return (",
+      "    <div>",
+      "      ${0}",
+      "    </div>",
+      "  );",
+      "}",
+      ""
+    ],
+    "scope": "typescriptreact, typescript"
+  },
+  "TSX Function with default export": {
+    "prefix": "rfnd",
+    "description": "Create a default-exported React Pure Function Component.",
+    "body": [
+      "import React from 'react';",
+      "",
+      "export interface ${1:${TM_FILENAME_BASE}}Props {",
+      "}",
+      "",
+      "export default function ${1:${TM_FILENAME_BASE}:} (props: ${1:${TM_FILENAME_BASE}}Props):JSX.Element {",
+      "  return (",
+      "    <div>",
+      "      ${0}",
+      "    </div>",
+      "  );",
+      "}",
+      ""
+    ],
+    "scope": "typescriptreact, typescript"
+  }
+}
