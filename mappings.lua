@@ -6,10 +6,7 @@
 return {
   -- first key is the mode
   n = {
-    -- second key is the lefthand side of the map
-    -- mappings seen under group name "Buffer"
     ["<leader>b"] = { name = "Buffers" },
-    ["<leader>bk"] = { "<cmd>bd<cr>", desc = "Close current buffer" },
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
@@ -20,7 +17,6 @@ return {
       end,
       desc = "Pick to close",
     },
-    -- tables with the `name` key will be registered with which-key if it's installed
 
     -- custom
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
@@ -31,13 +27,8 @@ return {
     ["<A-Down>"] = { "<cmd>m .+1<CR>", desc = "Move line down" },
     ["<AS-Up>"] = { "VyP", desc = "Copy/Paste line up" },
     ["<AS-Down>"] = { "Vyp", desc = "Copy/Paste line down" },
-    -- jester plugin
-    ["<leader>j"] = { name = "Jester" },
-    ["<leader>jt"] = { "<cmd>lua require'jester'.run()<cr>", desc = "Run test under cursor" },
-    ["<leader>jf"] = {
-      "<cmd>lua require'jester'.run_file({ cmd = 'npx jest --silent -- $file' })<cr>",
-      desc = "Run test file"
-    },
+
+    ["<leader>N"] = { name = "Neotest" },
   },
   t = {
     -- setting a mapping to false will disable it
