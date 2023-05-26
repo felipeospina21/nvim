@@ -27,10 +27,17 @@ return {
     ["<A-t>"] = { "<cmd>bnext<cr>", desc = "Next Buffer" },
     ["<AS-t>"] = { "<cmd>bprevious<cr>", desc = "Prev Buffer" },
     ["<leader>r"] = { "<cmd>e<cr>", desc = "Refresh file" },
+    ["<A-Up>"] = { "<cmd>m .-2<CR>", desc = "Move line up" },
+    ["<A-Down>"] = { "<cmd>m .+1<CR>", desc = "Move line down" },
+    ["<AS-Up>"] = { "VyP", desc = "Copy/Paste line up" },
+    ["<AS-Down>"] = { "Vyp", desc = "Copy/Paste line down" },
     -- jester plugin
     ["<leader>j"] = { name = "Jester" },
     ["<leader>jt"] = { "<cmd>lua require'jester'.run()<cr>", desc = "Run test under cursor" },
-    ["<leader>jf"] = { "<cmd>lua require'jester'.run_file()<cr>", desc = "Run test file" },
+    ["<leader>jf"] = {
+      "<cmd>lua require'jester'.run_file({ cmd = 'npx jest --silent -- $file' })<cr>",
+      desc = "Run test file"
+    },
   },
   t = {
     -- setting a mapping to false will disable it
