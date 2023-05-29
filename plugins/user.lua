@@ -7,6 +7,12 @@ return {
     event = { "BufEnter *.{tsx,ts}" },
   },
   {
+    "vuki656/package-info.nvim",
+    requires = "MunifTanjim/nui.nvim",
+    config = true,
+    event = "BufRead package.json",
+  },
+  {
     "EtiamNullam/deferred-clipboard.nvim",
     opts = { fallback = "unnamedplus" }
   },
