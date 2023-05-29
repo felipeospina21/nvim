@@ -29,6 +29,7 @@ return {
     ["<AS-Down>"] = { "Vyp", desc = "Copy/Paste line down" },
 
     ["<leader>N"] = { name = "Neotest" },
+    ["<leader>H"] = { name = "Http" },
   },
   t = {
     -- setting a mapping to false will disable it

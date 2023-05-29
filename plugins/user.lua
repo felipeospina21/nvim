@@ -16,6 +16,7 @@ return {
     event = { "BufEnter" }
   },
   {
+    -- Tag auto rename
     "AndrewRadev/tagalong.vim",
     event = { "BufEnter" }
   }
