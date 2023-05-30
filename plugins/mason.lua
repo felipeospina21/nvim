@@ -1,10 +1,8 @@
 local utils = require "astronvim.utils"
 
 return {
-  -- use mason-lspconfig to configure LSP installations
   {
     "williamboman/mason-lspconfig.nvim",
-    -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
       ensure_installed = { "lua_ls", "tsserver", "cssls", "dotls", "html", "jsonls", "marksman", "yamlls" },
     },
