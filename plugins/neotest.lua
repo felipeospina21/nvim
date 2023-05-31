@@ -14,7 +14,35 @@ return {
     require("neotest").setup {
       -- your neotest config here
       adapters = {
-        require "neotest-jest",
+        require "neotest-jest"
+        -- require("neotest-jest")({
+        --   strategy_config = function()
+        --     return {
+        --       dap = {
+        --         name = "Debug Jest Tests",
+        --         type = "pwa-node",
+        --         request = "launch",
+        --         -- args = { unpack(command, 2) },
+        --         -- runtimeExecutable = command[1],
+        --         console = "integratedTerminal",
+        --         internalConsoleOptions = "neverOpen",
+        --         rootPath = "${workspaceFolder}",
+        --         cwd = "${workspaceFolder}",
+        --         -- type = 'pwa-node',
+        --         -- request = 'launch',
+        --         -- cwd = vim.fn.getcwd(),
+        --         -- runtimeArgs = { '--inspect-brk', '$path_to_jest', '--no-coverage', '-t', '$result', '--', '$file' },
+        --         args = { '--no-cache' },
+        --         -- sourceMaps = false,
+        --         -- protocol = 'inspector',
+        --         -- skipFiles = { '<node_internals>/**/*.js' },
+        --         -- console = 'integratedTerminal',
+        --         port = 9229,
+        --         disableOptimisticBPs = true
+        --       }
+        --     }
+        --   end
+        -- }),
       },
     }
   end,

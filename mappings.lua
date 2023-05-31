@@ -30,6 +30,7 @@ return {
     ["<leader>N"] = { name = " Neotest" },
     ["<leader>H"] = { name = " Http" },
     ["<leader>P"] = { name = " Package.json" },
+    ["<leader>T"] = { name = " Two-slash" },
   },
   v = {
     ["<AS-Up>"] = { "yP", desc = "Copy/Paste line up" },
