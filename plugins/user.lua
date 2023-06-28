@@ -1,7 +1,11 @@
 local utils = require "astronvim.utils"
 
 return {
-  { "navarasu/onedark.nvim", enabled = false },
+  {
+    "olimorris/onedarkpro.nvim",
+    priority = 1000, -- Ensure it loads first
+    enabled = false,
+  },
   {
     "maxmellon/vim-jsx-pretty",
     name = "vim-jsx-pretty",
