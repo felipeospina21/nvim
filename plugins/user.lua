@@ -15,6 +15,7 @@ return {
   {
     "EtiamNullam/deferred-clipboard.nvim",
     opts = { fallback = "unnamedplus" },
+    event = "VeryLazy",
   },
   {
     "tpope/vim-surround",
@@ -27,13 +28,6 @@ return {
     event = { "BufEnter" },
   },
   {
-    "marilari88/twoslash-queries.nvim",
-    keys = {
-      { "<leader>Ti", "<cmd>InspectTwoslashQueries<CR>", desc = "Inspect Twoslash Queries" },
-      { "<leader>Tr", "<cmd>RemoveTwoslashQueries<CR>",  desc = "Remove Twoslash Queries" },
-    },
-  },
-  {
     "jose-elias-alvarez/typescript.nvim",
     init = function() astronvim.lsp.skip_setup = utils.list_insert_unique(astronvim.lsp.skip_setup, "tsserver") end,
     ft = {
@@ -43,5 +37,12 @@ return {
       "javascriptreact",
     },
     opts = function() return { server = require("astronvim.utils.lsp").config "tsserver" } end,
+  },
+  {
+    "sagarrakshe/toggle-bool",
+    event = { "BufEnter" },
+    keys = {
+      { "<C-t>", "<cmd>ToggleBool<cr>", desc = "Toggle boolean value" },
+    },
   },
 }
