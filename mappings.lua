@@ -26,6 +26,9 @@ return {
     ["<A-Down>"] = { "<cmd>m .+1<CR>", desc = "Move line down" },
     ["<AS-Up>"] = { "VyP", desc = "Copy/Paste line up" },
     ["<AS-Down>"] = { "Vyp", desc = "Copy/Paste line down" },
+    ["<leader>fj"] = { "<cmd>Telescope jumplist<cr>", desc = "Find jumplist" },
+    ["<leader>fs"] = { "<cmd>Telescope spell_suggest<cr>", desc = "Spell suggestion" },
+    ["<leader>f/"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Current buffer fzf" },
 
     ["<leader>N"] = { name = " Neotest" },
     ["<leader>H"] = { name = " Http" },
