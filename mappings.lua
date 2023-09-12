@@ -31,6 +31,7 @@ return {
     ["<leader>fs"] = { "<cmd>Telescope spell_suggest<cr>", desc = "Spell suggestion" },
     ["<leader>f/"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Current buffer fzf" },
     ["<leader>j"] = { "<cmd>JsDoc<cr>", desc = "Add JsDoc comment" },
+    ["<leader>,"] = { "*:%s/<C-r><C-w>/", desc = "Substitute word under cursor" },
 
     ["<leader>N"] = { name = " Neotest" },
     ["<leader>H"] = { name = " Http" },
