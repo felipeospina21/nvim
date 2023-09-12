@@ -30,6 +30,7 @@ return {
     ["<leader>fj"] = { "<cmd>Telescope jumplist<cr>", desc = "Find jumplist" },
     ["<leader>fs"] = { "<cmd>Telescope spell_suggest<cr>", desc = "Spell suggestion" },
     ["<leader>f/"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Current buffer fzf" },
+    ["<leader>j"] = { "<cmd>JsDoc<cr>", desc = "Add JsDoc comment" },
 
     ["<leader>N"] = { name = " Neotest" },
     ["<leader>H"] = { name = " Http" },
@@ -39,6 +40,7 @@ return {
   v = {
     ["<AS-Up>"] = { "yP", desc = "Copy/Paste line up" },
     ["<AS-Down>"] = { "yp", desc = "Copy/Paste line down" },
+    ["<leader>j"] = { "<esc><cmd>JsDoc<cr>", desc = "Add JsDoc comment" },
   },
   t = {
     -- setting a mapping to false will disable it

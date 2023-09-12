@@ -45,4 +45,17 @@ return {
       { "<C-t>", "<cmd>ToggleBool<cr>", desc = "Toggle boolean value" },
     },
   },
+  {
+    "heavenshell/vim-jsdoc",
+    ft = {
+      "typescript",
+      "typescriptreact",
+      "javascript",
+      "javascriptreact",
+    },
+    -- opts = { jsdoc_formatter = "tsdoc" },
+    keys = {
+      { "<leader>j", "<cmd>JsDoc<cr>", desc = "Add JsDoc comment to current function" },
+    },
+  },
 }
