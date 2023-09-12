@@ -39,10 +39,10 @@ return {
     opts = function() return { server = require("astronvim.utils.lsp").config "tsserver" } end,
   },
   {
-    "sagarrakshe/toggle-bool",
+    "gerazov/toggle-bool.nvim",
     event = { "BufEnter" },
     keys = {
-      { "<C-t>", "<cmd>ToggleBool<cr>", desc = "Toggle boolean value" },
+      { "<C-t>", "<cmd>lua require('toggle-bool').toggle_bool()<cr>", desc = "Toggle boolean value" },
     },
   },
   {
@@ -53,9 +53,9 @@ return {
       "javascript",
       "javascriptreact",
     },
-    -- opts = { jsdoc_formatter = "tsdoc" },
-    keys = {
-      { "<leader>j", "<cmd>JsDoc<cr>", desc = "Add JsDoc comment to current function" },
-    },
+  },
+  {
+    "matze/vim-move",
+    event = "BufEnter",
   },
 }
