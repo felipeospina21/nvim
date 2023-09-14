@@ -3,7 +3,6 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.editing-support.treesj" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
-  { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.colorscheme.rose-pine" },
   {
