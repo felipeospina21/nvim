@@ -58,4 +58,8 @@ return {
     "matze/vim-move",
     event = "BufEnter",
   },
+  {
+    "jparise/vim-graphql",
+    event = "BufEnter",
+  },
 }

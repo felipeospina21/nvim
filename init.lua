@@ -113,6 +113,18 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    vim.api.nvim_create_augroup("setIndent", { clear = true })
+    vim.api.nvim_create_autocmd("BufEnter", {
+      desc = "Golang files indent",
+      group = "setIndent",
+      pattern = "*.go",
+      callback = function()
+        vim.bo.expandtab = false
+        vim.bo.tabstop = 4
+        vim.bo.softtabstop = 4
+        vim.bo.shiftwidth = 4
+      end,
+    })
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
