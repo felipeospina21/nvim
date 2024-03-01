@@ -4,6 +4,7 @@ return {
   { import = "astrocommunity.editing-support.treesj" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.colorscheme.rose-pine" },
   {
     "rose-pine",

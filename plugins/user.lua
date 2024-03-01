@@ -1,5 +1,3 @@
-local utils = require "astronvim.utils"
-
 return {
   {
     "olimorris/onedarkpro.nvim",
@@ -26,17 +24,6 @@ return {
     -- Tag auto rename
     "AndrewRadev/tagalong.vim",
     event = { "BufEnter" },
-  },
-  {
-    "jose-elias-alvarez/typescript.nvim",
-    init = function() astronvim.lsp.skip_setup = utils.list_insert_unique(astronvim.lsp.skip_setup, "tsserver") end,
-    ft = {
-      "typescript",
-      "typescriptreact",
-      "javascript",
-      "javascriptreact",
-    },
-    opts = function() return { server = require("astronvim.utils.lsp").config "tsserver" } end,
   },
   {
     "gerazov/toggle-bool.nvim",

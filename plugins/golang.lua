@@ -38,7 +38,7 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
     },
-    ft = { "go" },
+    ft = { "go", "gomod" },
   },
   -- {
   --   "ray-x/go.nvim",
