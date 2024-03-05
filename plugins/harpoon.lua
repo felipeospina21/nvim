@@ -14,6 +14,8 @@ return {
     },
     keys = {
       { prefix .. "a", function() require("harpoon"):list():append() end, desc = "Add file" },
+      { prefix .. "r", function() require("harpoon"):list():remove() end, desc = "Remove file" },
+      { prefix .. "c", function() require("harpoon"):list():clear() end, desc = "Clear list" },
       {
         prefix .. "e",
         function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list()) end,
@@ -56,14 +58,3 @@ return {
     opts = { integrations = { harpoon = true } },
   },
 }
--- return {
---   "ThePrimeagen/harpoon",
---   branch = "harpoon2",
---   dependencies = { "nvim-lua/plenary.nvim" },
---   keys = {
---     { "<A-n>", "<cmd>lua require('harpoon.ui').nav_next()<cr>", desc = "nav next harpoon file" },
---     { "<A-e>", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", desc = "nav prev harpoon file" },
---     { "<A-m>", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", desc = "harpoon menu" },
---     { "<A-,>", "<cmd>lua require('harpoon.mark').add_file()<cr>", desc = "harpoon add file" },
---   },
--- }
