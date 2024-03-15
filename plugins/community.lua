@@ -3,6 +3,12 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.editing-support.treesj" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
+  {
+    "folke/todo-comments.nvim",
+    opts = {
+      signs = false,
+    },
+  },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.colorscheme.rose-pine" },

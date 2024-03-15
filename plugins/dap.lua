@@ -37,7 +37,7 @@ return {
       command = "node",
       -- args = { os.getenv "HOME" .. "/path/to/vscode-chrome-debug/out/src/chromeDebug.js" },
       args = {
-        require("mason-registry").get_package("chrome-debug-adapter"):get_install_path() .. "/src/chromeDebug.js",
+        require("mason-registry").get_package("chrome-debug-adapter"):get_install_path() .. "/out/src/chromeDebug.js",
       },
     }
 
